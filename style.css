@@ -1,0 +1,22 @@
+:root { color-scheme: dark; font-family: "Trebuchet MS", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; overflow: hidden; background: #050817; }
+body { color: #edf5ff; }
+.screen, .overlay { position: fixed; inset: 0; display: grid; place-items: center; }
+.screen { background: radial-gradient(circle at 50% 35%, #17245a 0, #090e2b 42%, #03050f 100%); }
+.stars, .stars::before, .stars::after { position: absolute; inset: 0; content: ""; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 83px 97px; opacity: .32; }
+.stars::before { transform: translate(31px, 48px); background-size: 137px 151px; opacity: .2; }
+.stars::after { transform: translate(-40px, 90px); background-size: 211px 193px; opacity: .18; }
+.start-card, .game-over-card { position: relative; z-index: 1; text-align: center; padding: 3rem 2.5rem; max-width: 560px; }
+.eyebrow { color: #63e6ff; font-size: .75rem; letter-spacing: .3em; margin: 0 0 1rem; }
+h1, h2 { margin: 0; letter-spacing: .04em; text-shadow: 0 0 28px #43c8ff66; }
+h1 { font-size: clamp(2.3rem, 8vw, 5.5rem); }
+h2 { font-size: clamp(2.4rem, 8vw, 4rem); }
+.hint, .game-over-card p:not(.eyebrow) { color: #b5c4e7; margin: 1.25rem 0 2rem; }
+.primary-button { border: 1px solid #7df1ff; border-radius: 999px; color: #04111e; background: #70efff; cursor: pointer; font: inherit; font-weight: 800; letter-spacing: .12em; padding: .9rem 2.5rem; text-transform: uppercase; box-shadow: 0 0 28px #43dfff80; transition: transform .2s, box-shadow .2s; }
+.primary-button:hover, .primary-button:focus-visible { transform: translateY(-3px) scale(1.03); box-shadow: 0 0 38px #43dfffcc; outline: none; }
+#game-canvas { display: block; width: 100vw; height: 100vh; background: #040716; }
+.overlay { background: #020411aa; backdrop-filter: blur(5px); }
+.game-over-card { background: #0b1230e8; border: 1px solid #526ba8; border-radius: 20px; box-shadow: 0 20px 80px #0008; }
+.game-over-card strong { color: #70efff; }
+[hidden] { display: none !important; }
